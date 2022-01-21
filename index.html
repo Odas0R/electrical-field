@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eletrical Field</title>
+    <style type="text/css">
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border: 0;
+        overflow: hidden;
+        display: block;
+        position: relative;
+      }
+
+      .buttons {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+
+      .buttons > div {
+        padding: 20px;
+        border: 2px solid white;
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module" src="./app.js"></script>
+    <canvas id="gl-canvas"></canvas>
+
+    <div class="buttons">
+      <div>Left Click - Negative Charge</div>
+      <div>Shift + Left Click - Positive Charge</div>
+    </div>
+  </body>
+
+  <script>
+    const buttons = document.querySelector(".buttons");
+    const canvas = document.querySelector("canvas");
+
+    canvas.addEventListener("click", () => {
+      buttons.style.display = "none";
+    });
+
+    buttons.addEventListener("click", () => {
+      buttons.style.display = "none";
+    });
+  </script>
+</html>
